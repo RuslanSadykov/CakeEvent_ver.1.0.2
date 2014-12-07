@@ -1,16 +1,17 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Phaenir
-  Date: 07.12.2014
-  Time: 22:11
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  <head>
-    <title></title>
-  </head>
-  <body>
-
-  </body>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Cake Event</title>
+</head>
+<body>
+<h1>Cake Event</h1>
+<form action="Controller">
+<input type="text" name="nutzer" value="egon" />
+<input type="submit" value="go" />
+</form>
+<ul>
+<li><a href="Controller">Modell-Übersicht</a></li>
+</ul>
+</body>
 </html>

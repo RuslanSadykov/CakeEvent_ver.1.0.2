@@ -1,0 +1,19 @@
+%data : PROD set, INGR set, sales_price[PROD], purchase_price[INGR], stock[INGR], v[PROD, INGR], capital, lwbProd[PROD], upbProd[PROD] 
+
+
+variables:
+	{ i in PROD: x[i]: real[lwbProd[i]..upbProd[i] ];  }
+	y[INGR]: real[0..];
+	cash:	 real[0..];
+
+objectives:
+	sum{i in PROD: sales_price[i] * x[i] } + cash ->max;
+
+constraints:
+	# ingrediens
+	node{j in INGR: 
+		sum{i in PROD: v[i,j] * x[i] }<= stock[j] + y[j];
+	}
+	# capital
+	sum{j in INGR: purchase_price[j] * y[j] } + cash = capital;
+ 

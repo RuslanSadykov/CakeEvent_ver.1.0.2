@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CakeEvent xmlns="http://www.example.org/CakeEvent" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="4" createdAt="05.11.2010 15:00:38" solved="false" solverStatus="unsolved" xsi:noNamespaceSchemaLocation="CakeEvent.xsd">
+    <name>Geburtstag</name>
+    <autor>CHristian Müller</autor>
+    <description>OR Kuchen backen Aufgabe</description>
+    <capital>400.0</capital>
+    <ingredients>
+        <ingredient id="0">
+            <name>Mehl</name>
+            <unit>kg</unit>
+            <price>1.5</price>
+            <stock>600.0</stock>
+        </ingredient>
+        <ingredient id="1">
+            <name>Zucker</name>
+            <unit>kg</unit>
+            <price>2.5</price>
+            <stock>250.0</stock>
+        </ingredient>
+        <ingredient id="2">
+            <name>Milch</name>
+            <unit>Liter</unit>
+            <price>1.2</price>
+            <stock>300.0</stock>
+        </ingredient>
+        <ingredient id="3">
+            <name>Eier</name>
+            <unit>Stck</unit>
+            <price>0.2</price>
+            <stock>2400.0</stock>
+        </ingredient>
+    </ingredients>
+    <recipes>
+        <recipe id="0">
+            <name>Kuchen 1</name>
+            <description>Beschreibung des Kuchen 1</description>
+            <instructions>Anleitung zum Erstellen eines Kuchen 1</instructions>
+            <recipe_ingredient ingredient_id="0" amount="2.0"/>
+            <recipe_ingredient ingredient_id="1" amount="0.5"/>
+            <recipe_ingredient ingredient_id="2" amount="1.0"/>
+            <recipe_ingredient ingredient_id="3" amount="6.0"/>
+            <sales_price>6.0</sales_price>
+            <production_lwb>0.0</production_lwb>
+            <production_upb>INF</production_upb>
+        </recipe>
+        <recipe id="1">
+            <name>Kuchen 2</name>
+            <description>Beschreibung des Kuchen 2</description>
+            <instructions>Anleitung zum Erstellen eines Kuchen 2</instructions>
+            <recipe_ingredient ingredient_id="0" amount="1.0"/>
+            <recipe_ingredient ingredient_id="1" amount="1.0"/>
+            <recipe_ingredient ingredient_id="2" amount="0.5"/>
+            <recipe_ingredient ingredient_id="3" amount="9.0"/>
+            <sales_price>8.0</sales_price>
+            <production_lwb>0.0</production_lwb>
+            <production_upb>INF</production_upb>
+        </recipe>
+    </recipes>
+</CakeEvent>

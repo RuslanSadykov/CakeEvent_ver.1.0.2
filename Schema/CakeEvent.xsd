@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/CakeEvent" xmlns:tns="http://www.example.org/CakeEvent" elementFormDefault="qualified">
+	<element name="CakeEvent">
+		<complexType>
+			<sequence>
+				<element name="name" type="token" minOccurs="1" maxOccurs="1" />
+				<element name="autor" type="token" minOccurs="1" maxOccurs="1" />
+				<element name="description" type="token" minOccurs="1" maxOccurs="1" />
+				<element name="capital" type="double" minOccurs="1" maxOccurs="1" />
+				<element ref="tns:ingredients" minOccurs="1" maxOccurs="1" />
+				<element ref="tns:recipes" minOccurs="1" maxOccurs="1" />
+				<element ref="tns:solution" minOccurs="0" maxOccurs="unbounded" />
+			</sequence>
+			<attribute name="id" type="token" use="required"/>
+			<attribute name="createdAt" type="token" use="optional" />
+			<attribute name="solved" type="boolean" use="required" />
+			<attribute name="solverStatus" type="token" use="optional" />
+		</complexType>
+	</element>
+	
+	<element name="ingredients">
+		<complexType>
+			<sequence>
+				<element ref="tns:ingredient" minOccurs="0" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="ingredient">
+		<complexType>
+			<sequence>
+				<element name="name" type="token" minOccurs="1" maxOccurs="1" />
+				<element name="unit" type="tns:units" minOccurs="1" maxOccurs="1" />
+				<element name="price" type="double" minOccurs="1" maxOccurs="1" />
+				<element name="stock" type="double" minOccurs="1" maxOccurs="1" />
+			</sequence>
+			<attribute name="id" type="int" use="required"/>
+		</complexType>
+	</element>
+	
+	<element name="recipes">
+		<complexType>
+			<sequence>
+				<element ref="tns:recipe" minOccurs="0" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="recipe">
+		<complexType>
+			<sequence>
+				<element name="name" type="token" minOccurs="1" maxOccurs="1" />
+				<element name="description" type="token" minOccurs="0" maxOccurs="1" />
+				<element name="instructions" type="token" minOccurs="1" maxOccurs="1" />
+				<element ref="tns:recipe_ingredient" minOccurs="0" maxOccurs="unbounded" />
+				<element name="sales_price" type="double" minOccurs="1" maxOccurs="1" />
+				<element name="production_lwb" type="double" minOccurs="1" maxOccurs="1" />
+				<element name="production_upb" type="double" minOccurs="1" maxOccurs="1" />
+			</sequence>
+			<attribute name="id" type="int" use="required"/>
+		</complexType>
+	</element>
+	
+	<element name="recipe_ingredient">
+		<complexType>
+			<attribute name="ingredient_id" type="int" use="required"/>
+			<attribute name="amount" type="double" use="required"/>
+		</complexType>
+	</element>
+	
+	<element name="solution">
+		<complexType>
+			<sequence>
+				<element name="profit" type="double" minOccurs="0" maxOccurs="1" />
+				<element name="used_capital" type="double" minOccurs="0" maxOccurs="1" />
+				<element ref="tns:production" minOccurs="0" maxOccurs="unbounded" />
+				<element ref="tns:used_ingredient" minOccurs="0" maxOccurs="unbounded" />
+			</sequence>
+			<attribute name="solved" type="boolean" use="required"/>
+			<attribute name="solvedAt" type="token" use="optional"/>
+			<attribute name="optimal" type="boolean" use="optional"/>
+			<attribute name="status" type="token" use="optional"/>
+		</complexType>
+	</element>
+	
+	<element name="production">
+		<complexType>
+			<attribute name="recipe_id" type="int" use="required"/>
+			<attribute name="quantity" type="double" use="required"/>
+		</complexType>
+	</element>
+	
+	<element name="used_ingredient">
+		<complexType>
+			<attribute name="ingredient_id" type="int" use="required"/>
+			<attribute name="amountStock" type="double" use="required"/>
+			<attribute name="amountBuyed" type="double" use="required"/>
+			<attribute name="CostBuyed" type="double" use="required"/>
+			<attribute name="percentOfCostBuyed" type="double" use="required"/>
+		</complexType>
+	</element>
+	
+	<simpleType name="units">
+		<restriction base="token">
+			<enumeration value="kg" />
+			<enumeration value="Liter" />
+			<enumeration value="Stck" />
+		</restriction>
+	</simpleType>
+</schema>
