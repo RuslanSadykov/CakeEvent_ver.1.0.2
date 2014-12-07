@@ -1,11 +1,20 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="CakeEvent_ver.1.0.2:war exploded">
+  <artifact type="exploded-war" build-on-make="true" name="CakeEvent_ver.1.0.2:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/CakeEvent_ver_1_0_2_war_exploded</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="CakeEvent_ver.1.0.2/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="CakeEvent_ver.1.0.2" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jCMPL" />
+          <element id="library" level="project" name="junit:junit:4.11" />
+          <element id="library" level="project" name="org.mockito:mockito-all:1.9.5" />
+          <element id="library" level="project" name="org.apache.commons:commons-lang3:3.3.2" />
+          <element id="library" level="project" name="org.apache.ws.commons.util:ws-commons-util:1.0.2" />
+          <element id="library" level="project" name="org.apache.xmlrpc:xmlrpc-client:3.1.3" />
+          <element id="library" level="project" name="org.apache.xmlrpc:xmlrpc-common:3.1.3" />
         </element>
       </element>
     </root>
