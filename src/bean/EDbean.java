@@ -17,15 +17,10 @@ import java.util.Calendar;
  *
  */
 public class EDbean implements Serializable{
-
 	/**
-	 * Url des verwendeten WebService
+	 * Url des verwendeten WebServices
 	 */
-	//public static final String 	WebService	= "http://127.0.0.1";
-	public static final String 	WebService	= "http://194.95.44.187:8008";
-	//public static final String 	WebService	= "http://www.tfh-wildau.de/";
-	//public static final String 	WebService	= "http://194.95.44.187:8009";
-
+	public static final String WebService=WebServices.WILDAU.getWebService();
 	/**
 	 * Absoluter Verzeichnisname des Verzeichnisses in dem die ModellDateien gespeichert werden
 	 */
