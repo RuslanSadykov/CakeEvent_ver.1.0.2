@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="org.webjars:jquery:1.9.1" type="repository">
+    <properties maven-id="org.webjars:jquery:1.9.1" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jquery-1.9.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -15,6 +15,7 @@
           <element id="library" level="project" name="org.apache.ws.commons.util:ws-commons-util:1.0.2" />
           <element id="library" level="project" name="org.apache.xmlrpc:xmlrpc-client:3.1.3" />
           <element id="library" level="project" name="org.apache.xmlrpc:xmlrpc-common:3.1.3" />
+          <element id="library" level="project" name="org.webjars:jquery:1.9.1" />
         </element>
       </element>
     </root>

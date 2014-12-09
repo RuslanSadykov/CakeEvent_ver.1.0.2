@@ -3,8 +3,10 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <link href="MainPageStyleSheet.css" rel="stylesheet" type="text/css"/>
-
     <title>Cake Event</title>
+    <script src="scripts/jquery-1.3.2.min.js" type="text/javascript"></script>
+    <script src="scripts/slide.js" type="text/javascript"></script>
+    <link href="slide.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div style="width:100%; height:1px; clear:both;"></div>
@@ -13,21 +15,6 @@
 </div>
 <div class="divHeader">
     <h1>Cake Event</h1>
-</div>
-<div class="divLogin">
-    <form action="Controller" method="post">
-        <p>User Name: <input name="nutzer" value="guest" type="text" /></p>
-        <p>User Password: <input name="userPassword" value="guest" type="password"/></p>
-        <input type="submit" value="Confirm" name="btnOK" />
-    </form>
-    <ul>
-        <li>
-            <a href="Controller" name="desc">Model description</a>
-        </li>
-        <li>
-            <a href="test.html" name="register">New user registration</a>
-        </li>
-    </ul>
 </div>
 <div class="divBody">
     <h3>Common information about sweet cakes.</h3>
@@ -69,5 +56,54 @@
         Later, during the post-war boom, other American companies (notably General Mills) developed this idea further, marketing cake mix on the principle of convenience, especially to housewives. When sales dropped heavily in the 1950s, marketers discovered that the cake in a box rendered the cake-making function of housewives relatively dispiriting. This was a time when women, retired from the war-time labor force, and in a critical ideological period in American history, were confined to the domestic sphere and oriented towards the freshly blossoming consumerism in the US. In order to compensate for this situation, the marketing psychologist Ernest Dichter ushered in the solution to the cake mix problem: frosting. Deprived of the creativity involved in making their own cake, within consumerist culture[clarification needed], housewives and other in-home cake makers could compensate by cake decoration inspired by, among other things, photographs in magazines of elaborately decorated cakes.</p>
     <p>Ever since, cake in a box has become a staple of supermarkets, and is complemented with frosting in a can.</p>
 </div>
+
+
+<div id="toppanel">
+    <div id="panel">
+        <div class="content clearfix">
+            <div class="right">
+                <!-- Login Form -->
+                <form class="clearfix" action="#" method="post">
+                    <h1>Member Login</h1>
+                    <label class="grey" for="log">Username:</label>
+                    <input class="field" type="text" name="log" id="log" value="" size="23" />
+                    <label class="grey" for="pwd">Password:</label>
+                    <input class="field" type="password" name="pwd" id="pwd" size="23" />
+                    <label><input name="rememberme" id="rememberme" type="checkbox" checked="checked" value="forever" /> &nbsp;Remember me</label>
+                    <div class="clear"></div>
+                    <input type="submit" name="submit" value="Login" class="bt_login" />
+                    <a class="lost-pwd" href="#">Lost your password?</a>
+                </form>
+            </div>
+            <div class="center right">
+                <!-- Register Form -->
+                <form action="#" method="post">
+                    <h1>Not a member yet? Sign Up!</h1>
+                    <label class="grey" for="signup">Username:</label>
+                    <input class="field" type="text" name="signup" id="signup" value="" size="23" />
+                    <label class="grey" for="email">Email:</label>
+                    <input class="field" type="text" name="email" id="email" size="23" />
+                    <label>A password will be e-mailed to you.</label>
+                    <input type="submit" name="submit" value="Register" class="bt_register" />
+                </form>
+            </div>
+        </div>
+    </div> <!-- /login -->
+
+    <!-- The tab on top -->
+    <div class="tab">
+        <ul class="login">
+            <li class="left">&nbsp;</li>
+            <li>Hello Guest!</li>
+            <li class="sep">|</li>
+            <li id="toggle">
+                <a id="open" class="open" href="#">Log In | Register</a>
+                <a id="close" style="display: none;" class="close" href="#">Close Panel</a>
+            </li>
+            <li class="right">&nbsp;</li>
+        </ul>
+    </div> <!-- / top -->
+
+</div> <!--panel -->
 </body>
 </html>
